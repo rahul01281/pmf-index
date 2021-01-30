@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400"
+      rel="stylesheet"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="logo.png" height="30" width="160" alt="" />
+        <ul>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="app-body">
+      <div class="app-container">
+        <div class="a">
+          <div class="upper">
+            <div class="uppertext">
+              <p>Learn from</p>
+              <p>The Best</p>
+            </div>
+          </div>
+          <div class="lower">
+            <div class="lowertext">
+              <p>for an</p>
+              <p>Even Better You</p>
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <video autoplay muted loop height="100%" width="100%">
+            <source src="FinalOutroforSales.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab" style="display: flex; justify-content: space-evenly">
+      <button class="tablinks" id="clickButton" onclick="openCity(event, 'London')">
+        <p>Programs</p>
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">
+        <p>Challenges</p>
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+        <p>Recipes</p>
+      </button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="London" class="tabcontent" style="margin-top: 20px">
+      <div class="container">
+        <div class="cards-list">
+          <div class="card 1">
+            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 2">
+            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
+            <div class="card_image">
+              <img src="2.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 3">
+            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
+            <div class="card_image">
+              <img src="3.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 4">
+            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Paris" class="tabcontent" style="margin-top: 20px">
+      <div class="container">
+        <div class="cards-list">
+          <div class="card 1">
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 2">
+            <div class="card_image">
+              <img src="2.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 3">
+            <div class="card_image">
+              <img src="3.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 4">
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 5">
+            <div class="card_image">
+              <img src="2.jpeg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent" style="margin-top: 20px">
+      <div class="container">
+        <div class="cards-list">
+          <div class="card 1">
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 2">
+            <div class="card_image">
+              <img src="2.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 3">
+            <div class="card_image">
+              <img src="3.jpeg" />
+            </div>
+          </div>
+
+          <div class="card 4">
+            <div class="card_image">
+              <img src="1.jpeg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="Paris" class="tabcontent" style="margin-top: 20px;">
+            <div class="container">
+                <div class="card 2">
+                    <div class="card_image">
+                        <img src="2.jpeg" />
+                    </div>
+                </div>
+                
+                <div class="card 2">
+                    <div class="card_image">
+                        <img src="2.jpeg" />
+                    </div>
+                </div>
+                
+                <div class="card 2">
+                    <div class="card_image">
+                        <img src="2.jpeg" />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div id="Tokyo" class="tabcontent" style="margin-top: 20px;">
+            <div class="card 3">
+                <div class="card_image">
+                    <img src="3.jpeg" />
+                </div>
+            </div>
+
+            <div class="card 3">
+                <div class="card_image">
+                    <img src="3.jpeg" />
+                </div>
+            </div>
+
+            <div class="card 3">
+                <div class="card_image">
+                    <img src="3.jpeg" />
+                </div>
+            </div>
+        </div> -->
+
+    <script>
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName('tabcontent')
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = 'none'
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName('tablinks')
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(' active', '')
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = 'block'
+        evt.currentTarget.className += ' active'
+      }
+    </script>
+
+    <script>
+      window.onload = function () {
+          document.getElementById('clickButton').click();
+        }
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

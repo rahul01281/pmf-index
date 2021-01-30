@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  padding: 21px;
+  background: #343a40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: white;
+}
+
+header ul li a:hover {
+  color: #6dbd46;
+  text-decoration: none;
+}
+
+/* .card {
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+}
+
+.tab {
+  overflow: hidden;
+  margin-top: 10px;
+} */
+
+/* the navigation tabs */
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  color: gray;
+  background-color: white;
+  font-size: 20px;
+}
+
+.tab button:focus {
+  border: none;
+  outline: none;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #6dbd46;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  font-weight: bold;
+  color: #6dbd46;
+  border-bottom: 5px solid #6dbd46;
+  font-size: 25px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* the cards */
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 200px;
+  height: 355px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  /* border-radius: 40px; */
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+
+.card .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 10%;
+  background: #a83232;
+  color: white;
+}
+
+.app-body {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background: #343a40;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.a {
+  /* border: 1px solid red; */
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 7%; */
+}
+
+.a h1 {
+  margin-top: 20%;
+  font-family: Poppins;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.a h3 {
+  margin-top: 20%;
+  font-family: Poppins;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.b {
+  /* border: 1px solid orange; */
+  flex: 0.65;
+}
+
+.b video {
+  padding: 2% 0;
+}
+
+.upper {
+  /* border: 1px solid orange; */
+  flex: 0.5;
+}
+
+.upper p {
+  color: white;
+  font-size: 4.3vw;
+  font-weight: 500;
+  margin: 0;
+  font-family: Poppins;
+}
+
+.lower p {
+  color: white;
+  font-size: 2.5vw;
+  font-weight: lighter;
+  margin: 0;
+  font-family: Poppins;
+}
+
+.lower {
+  /* border: 1px solid red; */
+  flex: 0.5;
+}
+
+.uppertext {
+  padding-top: 5%;
+  padding-left: 8%;
+  text-align: center;
+}
+
+.lowertext {
+  padding-top: 5%;
+  padding-left: 8%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1125px) {
+  .app-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: #343a40;
+  }
+
+  .app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 4%;
+    flex-direction: column;
+  }
+
+  .a {
+    /* border: 1px solid red; */
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 7%; */
+  }
+
+  .a h1 {
+    margin-top: 20%;
+    font-family: Poppins;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+
+  .a h3 {
+    margin-top: 20%;
+    font-family: Poppins;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+
+  .b {
+    /* border: 1px solid orange; */
+    flex: 0.7;
+  }
+
+  .b video {
+    padding: 2% 0;
+  }
+
+  .upper {
+    /* border: 1px solid orange; */
+    flex: 0.5;
+  }
+
+  .upper p {
+    color: white;
+    font-size: 7vw;
+    font-weight: 500;
+    margin: 0;
+    font-family: Poppins;
+    display: inline;
+  }
+
+  .uppertext {
+    /* padding-top: 5%;
+    padding-left: 8%; */
+    padding: 0 0;
+    text-align: center;
+  }
+
+  .lowertext {
+    /* padding-top: 5%;
+    padding-left: 8%; */
+    padding: 0 0;
+    text-align: center;
+  }
+
+  .lower p {
+    color: white;
+    font-size: 4vw;
+    font-weight: lighter;
+    margin: 0;
+    font-family: Poppins;
+    display: inline;
+  }
+
+  .lower {
+    /* border: 1px solid red; */
+    flex: 0.5;
+  }
+}
