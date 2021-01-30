@@ -51,7 +51,7 @@ header ul li a:hover {
   outline: none;
   cursor: pointer;
   padding: 10px 16px;
-  transition: 0.3s;
+  /* transition: 0.3s; */
   color: gray;
   background-color: white;
   font-size: 20px;
@@ -72,7 +72,7 @@ header ul li a:hover {
   font-weight: bold;
   color: #6dbd46;
   border-bottom: 5px solid #6dbd46;
-  font-size: 25px;
+  /* font-size: 25px; */
 }
 
 /* Style the tab content */
