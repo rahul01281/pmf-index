@@ -11,25 +11,39 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400"
-      rel="stylesheet"
-    />
+    
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
     </style>
   </head>
   <body>
-    <header>
-      <div class="header">
+
+    <div class="header show" id="myID">
+      <div class="container">
         <img src="logo.png" height="30" width="160" alt="" />
         <ul>
-          <li><a href="#">Programs</a></li>
+          <li><a href="#" style="color: #6dbd46;">Programs</a></li>
           <li><a href="#">Home</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-    </header>
+    </div>
+
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 70) {
+          myID.className = "header hide"
+        } else {
+          myID.className = "header show"
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+
 
     <div class="app-body">
       <div class="app-container">
@@ -55,164 +69,513 @@
       </div>
     </div>
 
-    <div class="tab" style="display: flex; justify-content: space-evenly">
-      <button class="tablinks" id="clickButton" onclick="openCity(event, 'London')">
-        <p>Programs</p>
-      </button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">
-        <p>Challenges</p>
-      </button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-        <p>Recipes</p>
-      </button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="London" class="tabcontent" style="margin-top: 20px">
-      <div class="container">
-        <div class="cards-list">
-          <div class="card 1">
-            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 2">
-            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
-            <div class="card_image">
-              <img src="2.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 3">
-            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
-            <div class="card_image">
-              <img src="3.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 4">
-            <!-- <span class="badge">Starts on 21 Feb 2021</span> -->
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="Paris" class="tabcontent" style="margin-top: 20px">
-      <div class="container">
-        <div class="cards-list">
-          <div class="card 1">
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 2">
-            <div class="card_image">
-              <img src="2.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 3">
-            <div class="card_image">
-              <img src="3.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 4">
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 5">
-            <div class="card_image">
-              <img src="2.jpeg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="Tokyo" class="tabcontent" style="margin-top: 20px">
-      <div class="container">
-        <div class="cards-list">
-          <div class="card 1">
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 2">
-            <div class="card_image">
-              <img src="2.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 3">
-            <div class="card_image">
-              <img src="3.jpeg" />
-            </div>
-          </div>
-
-          <div class="card 4">
-            <div class="card_image">
-              <img src="1.jpeg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div id="Paris" class="tabcontent" style="margin-top: 20px;">
-            <div class="container">
-                <div class="card 2">
-                    <div class="card_image">
-                        <img src="2.jpeg" />
-                    </div>
-                </div>
-                
-                <div class="card 2">
-                    <div class="card_image">
-                        <img src="2.jpeg" />
-                    </div>
-                </div>
-                
-                <div class="card 2">
-                    <div class="card_image">
-                        <img src="2.jpeg" />
-                    </div>
-                </div>
-            </div>
-           
-        </div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="tab" style="display: flex; justify-content: space-evenly; margin-top: 3%;">
+          <button class="tablinks" id="clickButton" onclick="openTab(event, 'programs')">
+            <p>Programs</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'challenges')">
+            <p>Challenges</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'recipes')">
+            <p>Recipes</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category1')">
+            <p>Category1</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category2')">
+            <p>Category2</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category3')">
+            <p>Category3</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category4')">
+            <p>Category4</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category5')">
+            <p>Category5</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category6')">
+            <p>Category6</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category7')">
+            <p>Category7</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category8')">
+            <p>Category8</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category9')">
+            <p>Category9</p>
+          </button>
+          
+          
         
-        <div id="Tokyo" class="tabcontent" style="margin-top: 20px;">
+        </div>
+      </div>
+      
+      <!-- Tab content -->
+      <div id="programs" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+            
             <div class="card 3">
-                <div class="card_image">
-                    <img src="3.jpeg" />
-                </div>
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+            
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="challenges" class="tabcontent" >
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+
+      <div id="recipes" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
             </div>
 
-            <div class="card 3">
-                <div class="card_image">
-                    <img src="3.jpeg" />
-                </div>
+            <div class="card 5">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
             </div>
 
-            <div class="card 3">
-                <div class="card_image">
-                    <img src="3.jpeg" />
-                </div>
+            <div class="card 6">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
             </div>
-        </div> -->
+
+            <div class="card 7">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+
+            <div class="card 8">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+
+      <div id="category1" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category2" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category3" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category4" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category5" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category6" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category7" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category8" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div id="category9" class="tabcontent">
+        <div class="container">
+          <div class="wrapper">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 2">
+              <div class="card_image">
+                <img src="2.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 3">
+              <div class="card_image">
+                <img src="3.jpeg" />
+              </div>
+            </div>
+      
+            <div class="card 4">
+              <div class="card_image">
+                <img src="1.jpeg" />
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <footer>
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="footer-content text-center">
+                <div class="footer-logo">
+                  <img src="https://www.planmyfood.com/assets/frontend/img/logo.png" alt="">
+                </div>
+                <div class="privacy">
+                  <a href="https://www.planmyfood.com/privacy"><p>Privacy Policy | </p></a>
+                  <a href="https://www.planmyfood.com/terms"><p>Terms & Conditions</p></a>
+                </div>
+                <div class="copyright">
+                  <p>©copyright 2017 MAJA Solutions LLP | All right reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script>
-      function openCity(evt, cityName) {
+      function openTab(evt, tabName) {
         // Declare all variables
         var i, tabcontent, tablinks
 
@@ -229,7 +592,7 @@
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = 'block'
+        document.getElementById(tabName).style.display = 'block'
         evt.currentTarget.className += ' active'
       }
     </script>
@@ -239,6 +602,8 @@
           document.getElementById('clickButton').click();
         }
     </script>
+
+    
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
