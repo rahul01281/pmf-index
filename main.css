@@ -38,6 +38,11 @@
   width: 0;
 }
 
+.wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* start cards */
 
 .card {
