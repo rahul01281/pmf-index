@@ -44,56 +44,59 @@
   </script> -->
 
   <div class="header show" id="headerID">
-    <div class="container" style="padding: 0 50px;">
+    <div class="container" style="padding: 0 50px">
       <img src="logo.png" height="30" width="160" alt="" />
-        <nav>
-          <div class="show-on-mobile">
-            <div id="mySidebar" class="sidebar">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
-              <a href="#">Programs</a>
-              <a href="#">Home</a>
-              <a href="#">Contact</a>
-            </div>
-            <div id="main">
-              <button class="openbtn" onclick="openNav()"><i class="fas fa-bars"></i></button>
-            </div>
+      <nav>
+        <div class="show-on-mobile">
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+            <a href="#">Programs</a>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
           </div>
-          <div class="show-on-desktop">
-            <ul>
-              <li style="color: #6dbd46;"><a href="#">Programs</a></li>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+          <div id="main">
+            <button class="openbtn" id="btn" onclick="openNav()">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
-        </nav>
+        </div>
+        <div class="show-on-desktop">
+          <ul>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
-
+  
   <script>
     function openNav() {
-      document.getElementById("mySidebar").style.width = "200px";
-      document.getElementById("main").style.marginLeft = "200px";
+      document.getElementById('mySidebar').style.width = '200px'
+      document.getElementById('main').style.marginLeft = '200px'
+      document.getElementsById('btn').className = 'fas fa-times'
     }
 
     function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
+      document.getElementById('mySidebar').style.width = '0'
+      document.getElementById('main').style.marginLeft = '0'
     }
   </script>
-
+  
   <script>
-    myID = document.getElementById("headerID");
+    myID3 = document.getElementById('headerID')
 
-    var myScrollFunc = function () {
-      var y = window.scrollY;
+    var myScrollFunc3 = function () {
+      var y = window.scrollY
       if (y >= 70) {
-        myID.className = "header hide"
+        myID3.className = 'header hide3'
       } else {
-        myID.className = "header show"
+        myID3.className = 'header show3'
       }
-    };
+    }
 
-    window.addEventListener("scroll", myScrollFunc);
+    window.addEventListener('scroll', myScrollFunc3)
   </script>
 
   <div class="app-body">
@@ -122,41 +125,39 @@
 
 
   <div class="cardsdiv">
-    <div class="container">
-      <div class="tab" style="display: flex; justify-content: space-evenly ;margin-top: 3%;">
-        <div class="container">
-          <div class="wrapper">
-            <button class="tablinks" id="clickButton" onclick="openTab(event, 'programs')">
-              <p>Programs</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'challenges')">
-              <p>Challenges</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'recipes')">
-              <p>Recipes</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category1')">
-              <p>Category1</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category2')">
-              <p>Category2</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category3')">
-              <p>Category3</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category4')">
-              <p>Category4</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category5')">
-              <p>Category5</p>
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'category6')">
-              <p>Category6</p>
-            </button> 
-          </div>
+    
+      <div class="container">
+        <div class="tab" style="margin-top: 3%;">
+        
+          <button class="tablinks" id="clickButton" onclick="openTab(event, 'programs')">
+            <p>Programs</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'challenges')">
+            <p>Challenges</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'recipes')">
+            <p>Recipes</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category1')">
+            <p>Category1</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category2')">
+            <p>Category2</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category3')">
+            <p>Category3</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category4')">
+            <p>Category4</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category5')">
+            <p>Category5</p>
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'category6')">
+            <p>Category6</p>
+          </button>
         </div>
       </div>
-    </div>
       
       <script>
         function openTab(evt, tabName) {
@@ -743,7 +744,6 @@
       </div>
 
   </div>
-    
 
   <footer>
     <div class="container">
